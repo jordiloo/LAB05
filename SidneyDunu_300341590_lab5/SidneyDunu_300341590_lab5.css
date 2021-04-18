@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* Lab 5
+  Author: Jordan SidneyDunu */
+
+
+
+
+
+  header {
+    height: 100px;
+    width: 100%;
+}
+
+header > h1 {
+    background-color: aqua;
+}
+
+header div li {
+    background-color: bisque;
+}
+
+article h1 h2 h3 {
+    background-color: red;
+    border: red;
+    border-color: red;
+    border-style: solid;
+}
+
+footer {
+    height: 40px;
+    width: 100%;
+    background-color: aqua;
+}
+
+nav {
+    min-height: 40px;
+    width: 100%;
+    display: flexbox;
+    flex-flow: row wrap;
+}
+
+@media only screen and (max-width: 600px) {
+    div ul {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    div li {
+        flex: 1 1 auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    nav ul li {
+        flex-flow: row;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    nav {
+        flex-flow: row wrap;
+    }
+
+    aside {
+        max-width: 20%;
+        min-width: 0%;
+    }
+}
+
+article {
+    float: left;
+    flex: 1 1  120px;
+}
+
+aside {
+    order: 99;
+}
+
+footer {
+    order: 100;
+}
